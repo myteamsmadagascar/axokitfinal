@@ -310,71 +310,277 @@ svg{width:100%; height:auto}
 <body>
 <div class="container">
 
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Détails & Financement — Projet Public</title>
+
+<style>
+:root{
+  --bg:#eef6fb;
+  --card:#ffffff;
+  --blue:#2563eb;
+  --green:#22c55e;
+  --red:#dc2626;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:rgba(15,23,42,.10);
+  --shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+/* BASE */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:18px;
+}
+
+/* TITRES */
+.title{
+  text-align:center;
+  font-size:26px;
+  font-weight:900;
+  margin:8px 0 6px;
+  background:linear-gradient(90deg,var(--blue),var(--green));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.subtitle{
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* CARTES */
+.card{
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:18px;
+  margin-bottom:18px;
+}
+
+/* TEXTE */
+.text{
+  font-size:14px;
+  line-height:1.6;
+}
+.text strong{font-weight:700}
+
+/* TITRES TABLE */
+.table-title{
+  font-size:16px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+/* WRAP TABLE */
+.table-wrap{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.88));
+}
+.table-scroll{
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+}
+
+/* HEADER */
+thead th{
+  background:linear-gradient(90deg,var(--blue),var(--green));
+  color:#fff;
+  padding:14px 12px;
+  font-size:13px;
+  text-align:left;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+thead th:first-child{border-top-left-radius:18px}
+thead th:last-child{border-top-right-radius:18px}
+
+/* BODY */
+tbody td{
+  padding:14px 12px;
+  border-bottom:1px solid rgba(15,23,42,.08);
+  vertical-align:top;
+  font-size:14px;
+  background:rgba(255,255,255,.75);
+}
+tbody tr:nth-child(even) td{
+  background:rgba(37,99,235,.04);
+}
+tbody tr:hover td{
+  background:rgba(34,197,94,.06);
+}
+tbody tr:last-child td:first-child{border-bottom-left-radius:18px}
+tbody tr:last-child td:last-child{border-bottom-right-radius:18px}
+
+/* BADGES */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding:7px 12px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:12px;
+  border:1px solid var(--border);
+}
+.state-badge{
+  background:linear-gradient(90deg, rgba(37,99,235,.18), rgba(37,99,235,.06));
+  color:#1e40af;
+}
+.axokit-badge{
+  background:linear-gradient(90deg, rgba(220,38,38,.18), rgba(220,38,38,.06));
+  color:#991b1b;
+}
+
+/* POURCENTAGES */
+.percent{
+  font-weight:1000;
+  font-size:15px;
+  white-space:nowrap;
+}
+.recetat{color:var(--blue)}
+.recax{color:var(--red)}
+
+/* ACTIONS */
+.actions{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+.action{
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+}
+.home{background:var(--blue)}
+.letter{background:var(--red)}
+
+/* MOBILE */
+@media(max-width:720px){
+  .title{font-size:22px}
+  th,td{font-size:13px}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- TITRE -->
   <div class="title">Détails & Financement — Projet Public</div>
   <div class="subtitle">
     Projet Public : Station IA Scientifique (OFFLINE)<br>
     IA 100% offline public — Coût logiciel secteur public : 0 €
   </div>
 
+ 
+
+  <!-- TABLEAU RÉCAPITULATIF -->
   <div class="card">
-    <div class="section-title">Évolution de la répartition des recettes</div>
-
-    <!-- GRAPHIQUE CLAIR -->
-    <svg viewBox="0 0 720 300">
-
-      <!-- axes -->
-      <line class="axis" x1="60" y1="20" x2="60" y2="260"/>
-      <line class="axis" x1="60" y1="260" x2="700" y2="260"/>
-
-      <!-- grilles -->
-      <line class="grid" x1="60" y1="200" x2="700" y2="200"/>
-      <line class="grid" x1="60" y1="140" x2="700" y2="140"/>
-      <line class="grid" x1="60" y1="80"  x2="700" y2="80"/>
-
-      <!-- lignes -->
-      <!-- ÉTAT : 25 35 45 55 80 -->
-      <path class="line state" d="M60,200 L220,185 L380,170 L540,155 L700,80"/>
-
-      <!-- AXOKIT : 75 65 55 45 20 -->
-      <path class="line axokit" d="M60,80 L220,100 L380,120 L540,140 L700,200"/>
-
-      <!-- points ÉTAT -->
-      <circle class="point" cx="60" cy="200" r="5" fill="#2563eb"/>
-      <circle class="point" cx="220" cy="185" r="5" fill="#2563eb"/>
-      <circle class="point" cx="380" cy="170" r="5" fill="#2563eb"/>
-      <circle class="point" cx="540" cy="155" r="5" fill="#2563eb"/>
-      <circle class="point" cx="700" cy="80"  r="5" fill="#2563eb"/>
-
-      <!-- points AXOKIT -->
-      <circle class="point" cx="60" cy="80"  r="5" fill="#dc2626"/>
-      <circle class="point" cx="220" cy="100" r="5" fill="#dc2626"/>
-      <circle class="point" cx="380" cy="120" r="5" fill="#dc2626"/>
-      <circle class="point" cx="540" cy="140" r="5" fill="#dc2626"/>
-      <circle class="point" cx="700" cy="200" r="5" fill="#dc2626"/>
-
-      <!-- labels -->
-      <text class="label" x="50" y="275">A1</text>
-      <text class="label" x="210" y="275">A2</text>
-      <text class="label" x="370" y="275">A3</text>
-      <text class="label" x="530" y="275">A4</text>
-      <text class="label" x="690" y="275">A5</text>
-
-    </svg>
+    <div class="table-title">Tableau récapitulatif — Répartition des recettes</div>
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Année</th>
+              <th>ÉTAT (Écoles Publiques)</th>
+              <th>AXOKIT (Société)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Année 1</td><td class="percent recetat">25 %</td><td class="percent recax">75 %</td></tr>
+            <tr><td>Année 2</td><td class="percent recetat">35 %</td><td class="percent recax">65 %</td></tr>
+            <tr><td>Année 3</td><td class="percent recetat">45 %</td><td class="percent recax">55 %</td></tr>
+            <tr><td>Année 4</td><td class="percent recetat">55 %</td><td class="percent recax">45 %</td></tr>
+            <tr><td><strong>Année 5</strong></td><td class="percent recetat"><strong>80 %</strong></td><td class="percent recax"><strong>20 %</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
-  <div class="card text">
-    <strong>Ces financements proviennent exclusivement des abonnements des établissements privés.</strong><br>
-    Les établissements publics bénéficient d’un accès totalement gratuit.<br><br>
+  <!-- TABLEAU DÉTAILLÉ -->
+  <div class="card">
+    <div class="table-title">Détail des rôles et objectifs</div>
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Partenaire</th>
+              <th>Rôle Principal</th>
+              <th>Répartition Recettes (Année 1)</th>
+              <th>Évolution de la Répartition (Année 2 à 5)</th>
+              <th>Objectif Final (Fin Année 5)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge state-badge">ÉTAT (Écoles Publiques)</span></td>
+              <td>Équipement, modernisation, mise à disposition des infrastructures et pilotage pédagogique.</td>
+              <td class="percent recetat">25 %</td>
+              <td>Hausse constante : 35% (A2), 45% (A3), 55% (A4), 80% (A5).</td>
+              <td>Indépendance totale grâce au transfert de technologie.</td>
+            </tr>
+            <tr>
+              <td><span class="badge axokit-badge">AXOKIT (Société)</span></td>
+              <td>Fourniture Licence IA Offline, installation, maintenance technique et actions sociales (petits-déjeuners).</td>
+              <td class="percent recax">75 %</td>
+              <td>Baisse progressive : 65% (A2), 55% (A3), 45% (A4), 20% (A5).</td>
+              <td>Transfert de technologie et retrait progressif de la gestion directe.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<div class="card text">
+  <p>
+    Ces financements proviennent exclusivement des abonnements des établissements privés.<br>
+    Les établissements publics bénéficient d’un accès totalement gratuit.
+  </p>
 
-    <strong>Architecture Nationale de Solidarité Éducative</strong><br>
-    Le privé finance, le public bénéficie : Investissement et actions sociales portés par Axokit.<br>
-    Coût logiciel État : 0 € : Modernisation immédiate sans impact budgétaire.<br>
-    Indépendance Souveraine : Solution 100 % offline avec transfert de technologie total.<br>
-    Modèle Évolutif : Part des recettes pour l’État passant de 25 % à 80 % en 5 ans.<br><br>
+  <p><strong>Architecture Nationale de Solidarité Éducative</strong></p>
 
+  <ul style="margin:0 0 12px 18px; padding:0; line-height:1.6;">
+    <li>Le privé finance, le public bénéficie : Investissement et actions sociales portés par Axokit.</li>
+    <li>Coût logiciel État : 0 € : Modernisation immédiate sans impact budgétaire.</li>
+    <li>Indépendance Souveraine : Solution 100 % offline avec transfert de technologie total.</li>
+    <li>Modèle Évolutif : Part des recettes pour l’État passant de 25 % à 80 % en 5 ans.</li>
+  </ul>
+
+  <p>
     <strong>L'essentiel : L'État acquiert une autonomie totale et la majorité des revenus sans décaisser de frais de licence.</strong>
-  </div>
-
+  </p>
+</div>
+  <!-- ACTIONS -->
   <div class="actions">
     <a class="action home" href="index.html">Retour à l’accueil</a>
     <a class="action letter" href="lettre.html">Lire la lettre de sollicitation</a>
@@ -383,9 +589,6 @@ svg{width:100%; height:auto}
 </div>
 </body>
 </html>
-</div>
-<div class="card">
-
 
 </div>
 
