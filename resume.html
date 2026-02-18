@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AXOKIT : L'IA AU SERVICE DE L'ÉDUCATION NATIONALE</title>
+<meta name="theme-color" content="#7dd3fc">
+
+<style>
+:root{
+  --blue:#38bdf8;
+  --cyan:#22d3ee;
+  --violet:#a78bfa;
+  --green:#34d399;
+  --gold:#facc15;
+  --red:#fb7185;
+
+  --bg1:#ecfeff;
+  --bg2:#e0f2fe;
+  --bg3:#f0f9ff;
+
+  --text:#0b1220;
+  --muted:#475569;
+
+  --glass:rgba(255,255,255,.9);
+  --stroke:rgba(15,23,42,.18);
+
+  --radius:22px;
+  --max:1100px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(56,189,248,.35), transparent 60%),
+    radial-gradient(700px 500px at 90% 20%, rgba(167,139,250,.28), transparent 60%),
+    radial-gradient(600px 500px at 50% 90%, rgba(250,204,21,.22), transparent 60%),
+    linear-gradient(180deg,var(--bg1),var(--bg2),var(--bg3));
+  color:var(--text);
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:auto;
+  padding:28px 18px 70px;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:26px;
+}
+
+header img{
+  height:56px;
+  filter:drop-shadow(0 0 18px rgba(56,189,248,.8));
+}
+
+header h1{
+  font-size:20px;
+  letter-spacing:.5px;
+}
+
+/* HERO */
+.hero{
+  background:var(--glass);
+  border-radius:var(--radius);
+  padding:34px;
+  border:2px solid var(--blue);
+  box-shadow:0 0 35px rgba(56,189,248,.45);
+}
+
+.hero h2{
+  margin:10px 0 0;
+  font-size:32px;
+}
+
+.badge{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--gold));
+  color:#fff;
+  font-weight:900;
+}
+
+/* SECTIONS */
+section{margin-top:32px}
+
+.card{
+  background:var(--glass);
+  border-radius:var(--radius);
+  padding:28px;
+  border-left:6px solid var(--blue);
+  box-shadow:0 18px 50px rgba(0,0,0,.12);
+}
+
+.card.cyan{border-left-color:var(--cyan)}
+.card.violet{border-left-color:var(--violet)}
+.card.green{border-left-color:var(--green)}
+.card.gold{border-left-color:var(--gold)}
+.card.red{border-left-color:var(--red)}
+
+h2{margin:0 0 14px;font-size:22px}
+h3{margin:20px 0 10px;font-size:17px}
+
+p,li{
+  font-size:15px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+ul{padding-left:20px}
+li{margin:8px 0}
+
+/* FORM */
+form{
+  max-width:640px;
+  display:grid;
+  gap:12px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  font-size:14px;
+}
+
+button{
+  padding:14px;
+  border-radius:999px;
+  border:0;
+  font-weight:900;
+  font-size:14px;
+  cursor:pointer;
+  color:white;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--gold));
+}
+
+/* LINKS */
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.links a{
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  background:rgba(255,255,255,.75);
+  border:1px solid var(--stroke);
+}
+
+@media(max-width:900px){
+  .hero h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <img src="logoaxokit.png" alt="AXOKIT">
+  <h1>Application IA de soutien scolaire</h1>
+</header>
+
+<section class="hero">
+  <span class="badge">Souveraineté Numérique – Solidarité – Excellence Scientifique</span>
+  <h2>AXOKIT : L'IA AU SERVICE DE L'ÉDUCATION NATIONALE</h2>
+</section>
+
+<section class="card cyan">
+<h2>LE CONCEPT</h2>
+<p>
+Axokit est une station d'Intelligence Artificielle scientifique 100 % autonome (Offline). Elle offre aux élèves un tuteur numérique de haut niveau en Mathématiques, Physique et Chimie, sans nécessité de connexion Internet ni de serveurs distants.
+</p>
+</section>
+
+<section class="card violet">
+<h2>LE MODÈLE ÉCONOMIQUE : SOLIDARITÉ NATIONALE</h2>
+<p>Le projet repose sur un mécanisme de péréquation entre le secteur privé et le secteur public.</p>
+<ul>
+<li>Secteur Privé (Le Levier) : Les établissements privés souscrivent à une licence annuelle « Premium » adaptée à leur catégorie.</li>
+<li>Secteur Public (Le Bénéficiaire) : Grâce aux fonds du privé, l’État équipe gratuitement les collèges et lycées publics.</li>
+<li>Coût pour le Public : 0 € (Matériel, logiciel, installation et maintenance).</li>
+<li>Impact Social : Distribution d'un petit-déjeuner quotidien aux élèves (via l’organisme Bii).</li>
+</ul>
+</section>
+
+<section class="card green">
+<h2>PILOTAGE NATIONAL (DATA)</h2>
+<ul>
+<li>Souveraineté : Digitalisation 100% "Zéro Papier" des notes (Public & Privé).</li>
+<li>Analyse : Vision en temps réel des performances et lacunes nationales.</li>
+<li>Transfert (Hors-ligne) : Smartphone : Synchronisation locale (Wi-Fi/Câble) puis envoi 4G.</li>
+<li>USB : Extraction et dépôt sur portail en zone connectée.</li>
+</ul>
+</section>
+
+<section class="card gold">
+<h2>L'ACCORD-CADRE AVEC L'ÉTAT</h2>
+<ul>
+<li>Engagement Budgétaire : NÉANT. Aucune avance de trésorerie ni décaissement.</li>
+<li>Rôle de l'État : Régulateur et prescripteur. Il définit les zones prioritaires et officialise l'outil dans le programme.</li>
+<li>Chiffres Clés : 1 million d'élèves du privé financent l'équipement de 1,5 million d'élèves du public.</li>
+</ul>
+</section>
+
+<section class="card red">
+<h2>CARACTÉRISTIQUES TECHNIQUES & LOGISTIQUES</h2>
+
+<h3>1. La Station IA</h3>
+<ul>
+<li>Optimisation : Ordinateurs haute performance (400-600 €) capables de faire tourner l'IA localement.</li>
+<li>Accès Hybride : Version Web (pour le privé connecté) et version Locale (pour une performance totale sans internet).</li>
+</ul>
+
+<h3>2. Optimisation des Ressources</h3>
+<ul>
+<li>Usage Collectif : Un seul ordinateur peut servir à tout un établissement.</li>
+<li>Organisation : Travail par groupes de 3 élèves, planning hebdomadaire et mode "Auditorium" via vidéoprojecteur.</li>
+</ul>
+</section>
+
+<section class="card cyan">
+<h2>POURQUOI MAINTENANT ?</h2>
+<ul>
+<li>Réduction de la Fracture Numérique : Accès à l'IA même dans les zones sans internet.</li>
+<li>Excellence Académique : Soutien intensif dans les matières scientifiques (STEM).</li>
+<li>Modernisation de l'Image : Une école sans Axokit est désormais perçue comme dépassée.</li>
+</ul>
+</section>
+
+<section class="card violet">
+<h2>NOTRE MISSION</h2>
+<p>
+« Garantir à chaque élève malgache un accès équitable à une éducation scientifique moderne et assurer la réussite de la nouvelle génération. »
+</p>
+</section>
+
+<section class="card green">
+<h2>Le Statut d'État Mentor : Vers une Souveraineté Solidaire et un Rayonnement International</h2>
+
+<h3>Levier de Résilience : Le Statut d'État Mentor (Expansion Externe)</h3>
+<p>
+En tant qu'État pionnier d'AXOKIT, vous devenez l'ambassadeur de cette excellence auprès d'autres nations. En facilitant l'adhésion d'au moins un État partenaire supplémentaire, vous activez un fonds de coopération stratégique aux retombées majeures :
+</p>
+
+<ul>
+<li>Fonds de Lutte contre les Désastres Climatiques : Les revenus générés par l'expansion du réseau vers d'autres États constituent une réserve financière pour la reconstruction et la protection face aux cyclones.</li>
+<li>Urgence Sociale et Nutritionnelle : Ces ressources permettent de soutenir des programmes vitaux tels que la lutte contre la faim (distribution de petits-déjeuners) et la santé des élèves.</li>
+<li>Investissement dans l'Éducation : Au-delà de l'IA, cet apport financier externe sécurise le développement des infrastructures scolaires et l'avenir de la nouvelle génération.</li>
+</ul>
+
+<h3>Pourquoi adopter ce modèle maintenant ?</h3>
+<ul>
+<li>Un apport financier important et passif : Plus le réseau d'États s'élargit, plus votre part de "coopération" augmente, vous offrant des moyens massifs pour vos programmes sociaux sans augmenter la pression fiscale.</li>
+<li>Réduction de la Fracture Numérique : Vous offrez le meilleur de la technologie scientifique mondiale à vos élèves, tout en protégeant votre budget national.</li>
+<li>Leadership Régional : Votre État démontre qu'une éducation moderne peut être le moteur d'une solidarité financière internationale.</li>
+</ul>
+
+<p>
+Nous sommes convaincus que la solution AXOKIT, couplée à ce modèle de croissance mutualisée, fera de votre État un modèle de résilience exemplaire, capable de transformer l'innovation technologique en un bouclier contre les aléas climatiques et sociaux.
+</p>
+
+<p>
+Nous nous tenons à votre disposition pour formaliser ce nouveau cadre de coopération internationale.
+</p>
+</section>
+
+<section class="card gold">
+<h2>Contact</h2>
+
+<form action="https://formsubmit.co/partenariat@axokit.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Contact AXOKIT">
+
+<input name="Nom" placeholder="Nom complet" required>
+<input name="Organisation" placeholder="Organisation / Institution" required>
+<input type="email" name="Email" placeholder="Email" required>
+<input type="email" name="tel" placeholder="Téléphone" required>
+<textarea name="Message" rows="4" placeholder="Votre message" required></textarea>
+
+<button type="submit">Envoyer</button>
+</form>
+
+<div class="links">
+<a href="lettre.html">Lire la lettre de sollicitation</a>
+<a href="accord.html">Voir l’accord-cadre</a>
+<a href="luttefaim.html">Programme lutte contre la faim</a>
+<a href="index.html">Retour à l’accueil</a>
+</div>
+</section>
+
+</div>
+</body>
+</html>
